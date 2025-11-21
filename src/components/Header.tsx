@@ -39,9 +39,12 @@ const Header: React.FC = () => {
                             </li>
                         ))}
                         <li>
-                            <Link href="#cta" className="text-black bg-primary hover:bg-primary-accent px-8 py-3 rounded-full transition-colors">
-                                Download
-                            </Link>
+                            <Link
+                                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1"
+                                className="text-black bg-primary hover:bg-primary-accent px-8 py-3 rounded-full transition-colors"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
                         </li>
                     </ul>
 
