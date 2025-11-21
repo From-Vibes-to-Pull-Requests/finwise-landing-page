@@ -12,7 +12,6 @@ interface Props {
 
 const PricingColumn: React.FC<Props> = ({ tier, highlight }: Props) => {
     const { name, price, features } = tier;
-    const isPro = name === 'Pro';
 
     return (
         <div className={clsx("w-full max-w-sm mx-auto bg-white rounded-xl border border-gray-200 lg:max-w-full", { "shadow-lg": highlight })}>
@@ -24,23 +23,7 @@ const PricingColumn: React.FC<Props> = ({ tier, highlight }: Props) => {
                     </span>
                     {typeof price === 'number' && <span className="text-lg font-normal text-gray-600">/mo</span>}
                 </p>
-                <button 
-                    className={clsx("w-full py-3 px-4 rounded-full transition-colors", { 
-                        "bg-primary hover:bg-primary-accent": highlight && !isPro, 
-                        "bg-hero-background hover:bg-gray-200": !highlight 
-                    })}
-                    style={isPro ? { backgroundColor: '#2251FF', color: 'white' } : undefined}
-                    onMouseEnter={(e) => {
-                        if (isPro) {
-                            e.currentTarget.style.backgroundColor = '#1a42cc';
-                        }
-                    }}
-                    onMouseLeave={(e) => {
-                        if (isPro) {
-                            e.currentTarget.style.backgroundColor = '#2251FF';
-                        }
-                    }}
-                >
+                <button className={clsx("w-full py-3 px-4 rounded-full transition-colors", { "bg-secondary hover:opacity-90 text-white": highlight, "bg-hero-background hover:bg-gray-200": !highlight })}>
                     Get Started
                 </button>
             </div>
