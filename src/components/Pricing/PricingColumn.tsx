@@ -1,7 +1,7 @@
 'use client';
 
 import clsx from "clsx";
-import { BsFillCheckCircleFill } from "react-icons/bs";
+import { GiCroissant } from "react-icons/gi";
 
 import { IPricing } from "@/types";
 
@@ -33,7 +33,10 @@ const PricingColumn: React.FC<Props> = ({ tier, highlight }: Props) => {
                 <ul className="space-y-4 mb-8">
                     {features.map((feature, index) => (
                         <li key={index} className="flex items-center">
-                            <BsFillCheckCircleFill className="h-5 w-5 text-secondary mr-2" />
+                            <GiCroissant
+                                className="h-5 w-5 text-primary mr-2"
+                                style={{ transform: "rotate(120deg)" }}
+                            />
                             <span className="text-foreground-accent">{feature}</span>
                         </li>
                     ))}
