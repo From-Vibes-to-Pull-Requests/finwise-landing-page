@@ -52,3 +52,65 @@ h1, h2, h3, h4, h5, h6 {
 .benefit-section:last-of-type > div {
   @apply mb-10;
 }
+
+.duck-walker {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 30;
+  opacity: 0.95;
+}
+
+.duck-walker__track {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  height: 110px;
+  overflow: visible;
+}
+
+.duck-walker__cross {
+  width: 130px;
+  height: 90px;
+  animation: duck-cross 24s linear infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.duck-walker__duck {
+  width: 130px;
+  height: 90px;
+  animation: duck-bob 1.2s ease-in-out infinite;
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.12));
+}
+
+@keyframes duck-cross {
+  0% {
+    transform: translate3d(-150px, 0, 0) scaleX(1);
+  }
+  45% {
+    transform: translate3d(calc(100vw + 150px), 0, 0) scaleX(1);
+  }
+  50% {
+    transform: translate3d(calc(100vw + 150px), 0, 0) scaleX(-1);
+  }
+  95% {
+    transform: translate3d(-150px, 0, 0) scaleX(-1);
+  }
+  100% {
+    transform: translate3d(-150px, 0, 0) scaleX(1);
+  }
+}
+
+@keyframes duck-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}

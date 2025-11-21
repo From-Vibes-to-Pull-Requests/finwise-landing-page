@@ -8,6 +8,7 @@ import Container from "@/components/Container";
 import Section from "@/components/Section";
 import Stats from "@/components/Stats";
 import CTA from "@/components/CTA";
+import DuckWalker from "@/components/DuckWalker";
 
 const HomePage: React.FC = () => {
   return (
@@ -39,6 +40,7 @@ const HomePage: React.FC = () => {
         
         <CTA />
       </Container>
+      <DuckWalker />
     </>
   );
 };
