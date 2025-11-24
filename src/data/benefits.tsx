@@ -1,4 +1,4 @@
-import { FiBarChart2, FiBriefcase, FiDollarSign, FiLock, FiPieChart, FiShield, FiTarget, FiTrendingUp, FiUser } from "react-icons/fi";
+import { FiActivity, FiBarChart2, FiBriefcase, FiCpu, FiDollarSign, FiLock, FiPieChart, FiRefreshCw, FiShield, FiTarget, FiTrendingUp, FiUser } from "react-icons/fi";
 
 import { IBenefit } from "@/types"
 
@@ -68,5 +68,27 @@ export const benefits: IBenefit[] = [
             }
         ],
         imageSrc: "/images/mockup-1.webp"
+    },
+    {
+        title: "Crypto Command Center",
+        description: "Stay ahead of the market with live pricing, wallet health insights, and instant trade readiness—all inside a clean mobile dashboard.",
+        bullets: [
+            {
+                title: "Live Market Pulse",
+                description: "Track Bitcoin, Ethereum, and trending altcoins with streaming price action.",
+                icon: <FiActivity size={26} />
+            },
+            {
+                title: "Wallet Intelligence",
+                description: "See allocations, gas fees, and staking rewards in a single secure view.",
+                icon: <FiCpu size={26} />
+            },
+            {
+                title: "One-Tap Conversions",
+                description: "Swap assets across networks with automated compliance guardrails.",
+                icon: <FiRefreshCw size={26} />
+            }
+        ],
+        imageSrc: "/images/mockup-crypto.svg"
     },
 ]
