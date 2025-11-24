@@ -2,6 +2,16 @@ import { IPricing } from "@/types";
 
 export const tiers: IPricing[] = [
     {
+        name: 'Basic',
+        price: 0,
+        features: [
+            'Basic cloud integration',
+            'Up to 2 team members',
+            '5GB storage',
+            'Community support',
+        ],
+    },
+    {
         name: 'Starter',
         price: 49,
         features: [
