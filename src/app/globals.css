@@ -49,6 +49,61 @@ h1, h2, h3, h4, h5, h6 {
   @apply w-fit h-10 sm:h-12;
 }
 
+.logos-marquee {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.logos-marquee__track {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+  width: max-content;
+  animation: logos-scroll 28s linear infinite;
+  will-change: transform;
+}
+
+.logos-marquee__item {
+  flex: 0 0 auto;
+  opacity: 0.5;
+  transition: opacity 0.2s ease-out;
+}
+
+.logos-marquee__item:hover {
+  opacity: 0.9;
+}
+
+.logos-marquee__item svg path,
+.logos-marquee__item svg rect,
+.logos-marquee__item svg circle,
+.logos-marquee__item svg ellipse {
+  transition: fill 0.25s ease, stroke 0.25s ease;
+}
+
+.logos-marquee__item:hover svg path,
+.logos-marquee__item:hover svg rect,
+.logos-marquee__item:hover svg circle,
+.logos-marquee__item:hover svg ellipse {
+  fill: var(--secondary);
+  stroke: var(--secondary);
+}
+
+@keyframes logos-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logos-marquee__track {
+    animation: none;
+  }
+}
+
 .benefit-section:last-of-type > div {
   @apply mb-10;
 }
