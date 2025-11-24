@@ -197,7 +197,7 @@ const SupportAssistant: React.FC = () => {
           <div className="bg-secondary text-white p-4 rounded-t-lg flex items-center justify-between">
             <div>
               <h3 className="font-semibold text-lg">Support Assistant</h3>
-              <p className="text-sm text-white/90">We're here to help!</p>
+              <p className="text-sm text-white/90">We&apos;re here to help!</p>
             </div>
             <button
               onClick={handleClose}
